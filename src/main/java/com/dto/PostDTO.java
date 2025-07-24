@@ -6,18 +6,20 @@ import com.model.Post;
 
 public record PostDTO(
     Long id,
-    String title,
-    String content,
     LocalDateTime createdAt,
-    String authorUid
+    String authorUid,
+    String imageUrl,
+    String caption,
+    boolean favorited
 ) {
     public PostDTO(Post post) {
         this(
             post.getId(),
-            post.getTitle(),
-            post.getContent(),
             post.getCreatedAt(),
-            post.getAuthorUid()
+            post.getAuthorUid(),
+            post.getImageUrl(),
+            post.getCaption(),
+            post.isFavorited()
         );
     }
 }

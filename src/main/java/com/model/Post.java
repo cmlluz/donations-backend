@@ -14,10 +14,11 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private String content;
     private LocalDateTime createdAt;
     private String authorUid;
+    private String imageUrl;
+    private String caption;
+    private boolean favorited;
 
     public Post() {
         this.createdAt = LocalDateTime.now();
@@ -29,22 +30,6 @@ public class Post {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -61,5 +46,26 @@ public class Post {
 
     public void setAuthorUid(String authorUid) {
         this.authorUid = authorUid;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getCaption() {
+        return caption;
+    }
+    public void setCaption(String caption) {
+        this.caption = caption;
+    }
+
+    public boolean isFavorited() {
+        return favorited;
+    }
+    public void setFavorited(boolean favorited) {
+        this.favorited = favorited;
     }
 }
