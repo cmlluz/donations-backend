@@ -32,3 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 >>>>>>> b6ea875 (initial commit)
+
+# Firebase service account key
+firebase-service-account.json
+
+# Ignorar script local de build do jdk 17
+mvn-java17.bat
